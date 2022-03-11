@@ -16,9 +16,14 @@ export class HomeComponent implements OnInit {
       url: 'calendar'
     },
     {
-      text: 'I18n',
+      text: 'I18n-js',
       icon: 'language',
       url: 'language'
+    },
+    {
+      text: 'ngx-translate',
+      icon: 'language',
+      url: 'language-ng-translate'
     }
   ];
 

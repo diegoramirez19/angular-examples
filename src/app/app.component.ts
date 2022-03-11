@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
+
 import { InternationalizationService } from './components/language/services/internationalization.service';
-import { TranslationService } from './components/language/services/translation.service';
+import { LanguageService } from './components/language/services/language.service';
+/*
+  Service to use ng-translate
+*/
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +14,14 @@ import { TranslationService } from './components/language/services/translation.s
 })
 export class AppComponent {
 
+  param = {value: 'world'};
+
   constructor(
     private internazionalization: InternationalizationService,
-    private translation: TranslationService,
+    private language: LanguageService,
   ) {
     this.internazionalization.chargeInternationalization();
-    /*
-      I need to know where I can init the service
-    */
-   this.translation.init();
+    this.language.init();
   }
 
 }

@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'language',
     loadChildren: () => import('./language/language.module').then(m => m.LanguageModule)
+  },
+  {
+    path: 'language-ng-translate',
+    loadChildren: () => import('./language-ng-translate/language-ng-translate.module').then(m => m.LanguageNgTranslateModule)
   }
 ];
 

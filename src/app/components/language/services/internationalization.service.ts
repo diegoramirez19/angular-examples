@@ -10,9 +10,6 @@ export class InternationalizationService {
   public enFile: any = {};
   public esFile: any = {};
 
-
-  constructor() { }
-
   initialize(translations: { [locale: string]: object }): void {
     i18n.translations = translations;
   }

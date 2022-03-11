@@ -1,17 +1,19 @@
-<mat-form-field appearance="fill">
-    <form [formGroup]="form">
-        <mat-select formControlName="languageSelected">
-            <mat-option (click)="setLanguage(language)" *ngFor="let language of languages" [value]="language.code">
-                {{language.name}}
-            </mat-option>
-        </mat-select>
-    </form>
-</mat-form-field>
+<div class="container">
+	<mat-form-field appearance="fill">
+		<form [formGroup]="form">
+			<mat-select formControlName="selected">
+				<mat-option (click)="setLanguage(language)" *ngFor="let language of languages" [value]="language.code">
+					{{language.name}}
+				</mat-option>
+			</mat-select>
+		</form>
+	</mat-form-field>
 
-<mat-selection-list [multiple]="false">
-    <div mat-subheader>Components</div>
-    <mat-list-item>
-        <div mat-line>{{'_AMENITIES' | translate}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-</mat-selection-list>
+	<mat-selection-list [multiple]="false">
+		<div mat-subheader></div>
+		<mat-list-item *ngFor="let lang of languagesKeys">
+			<div mat-line>{{lang | translate}}</div>
+			<mat-divider></mat-divider>
+		</mat-list-item>
+	</mat-selection-list>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>{{'views.cashflow.select_all' | translate}}</h1>
+    <h2>{{'ADDRESS' | translate}}</h2>
+    <div class="select">
+        <select (change)="setLanguage(languagueSelected)" [(ngModel)]="languagueSelected">
+            <option *ngFor="let lang of languages" [value]="lang.code">{{lang.name}}</option>
+        </select>
+    </div>
+</div>
